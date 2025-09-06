@@ -1,0 +1,85 @@
+{
+  "name": "Refertazione ABPM",
+  "description": "Refertazione automatica per monitoraggio pressorio ambulatoriale (ABPM)",
+  "inputs": [
+    {
+      "label": "MGS",
+      "type": "number"
+    },
+    {
+      "label": "MGD",
+      "type": "number"
+    },
+    {
+      "label": "MDS",
+      "type": "number"
+    },
+    {
+      "label": "MDD",
+      "type": "number"
+    },
+    {
+      "label": "MNS",
+      "type": "number"
+    },
+    {
+      "label": "MND",
+      "type": "number"
+    },
+    {
+      "label": "PDS",
+      "type": "number"
+    },
+    {
+      "label": "PDD",
+      "type": "number"
+    },
+    {
+      "label": "PNS",
+      "type": "number"
+    },
+    {
+      "label": "PND",
+      "type": "number"
+    },
+    {
+      "label": "CRO",
+      "type": "number"
+    },
+    {
+      "label": "DIP",
+      "type": "number"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "Sezione A (andamento globale)",
+      "function": "sezioneA"
+    },
+    {
+      "name": "Sezione B (picchi pressori)",
+      "type": "string",
+      "function": "sezioneB"
+    },
+    {
+      "name": "Sezione C (valori medi e massimi)",
+      "type": "string",
+      "function": "sezioneC"
+    },
+    {
+      "name": "Sezione D (andamento globale)",
+      "type": "string",
+      "function": "sezioneD"
+    },
+    {
+      "name": "Sezione E (andamento globale)",
+      "type": "string",
+      "function": "sezioneE"
+    },
+    {
+      "name": "Sezione F (andamento globale)",
+      "type": "string",
+      "function": "sezioneF"
+    }
+  ]
+}

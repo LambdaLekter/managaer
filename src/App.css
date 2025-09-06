@@ -5,6 +5,17 @@
   text-align: center;
 }
 
+#select-task {
+    margin-bottom: 10px;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
