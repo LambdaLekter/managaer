@@ -16,12 +16,12 @@ function App() {
     }
 
     const onTaskChange = (taskID) => {
-        const taskFileName = "./tasks/" + taskID + "/task.json";
         setError(false);
 
-        import(taskFileName + "?raw")
-            .then(mod => {
-                setTask(JSON.parse(mod.default));
+        fetch(import.meta.env.BASE_URL + 'tasks/' + taskID + '.json')
+            .then(res => res.json())
+            .then(data => {
+                setTask(data);
             })
             .catch(err => {
                 console.error("Error reading task file:", err);

@@ -5,7 +5,7 @@ function RefOutput(props) {
     const [functionResult, setFunctionResult] = useState("");
 
     useEffect(() => {
-        import(`../tasks/${props.taskID}/functions.js`)
+        import(`../functions/${props.taskID}.js`)
             .then(module => {
                 const f = module[props.function];
                 setFunc(() => f);
