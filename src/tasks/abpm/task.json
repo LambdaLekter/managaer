@@ -1,4 +1,5 @@
 {
+  "id": "abpm",
   "name": "Refertazione ABPM",
   "description": "Refertazione automatica per monitoraggio pressorio ambulatoriale (ABPM)",
   "inputs": [
@@ -53,31 +54,31 @@
   ],
   "outputs": [
     {
-      "name": "Sezione A (andamento globale)",
+      "label": "Sezione A (andamento globale)",
       "function": "sezioneA"
     },
     {
-      "name": "Sezione B (picchi pressori)",
+      "label": "Sezione B (picchi pressori)",
       "type": "string",
       "function": "sezioneB"
     },
     {
-      "name": "Sezione C (valori medi e massimi)",
+      "label": "Sezione C (valori medi e massimi)",
       "type": "string",
       "function": "sezioneC"
     },
     {
-      "name": "Sezione D (andamento globale)",
+      "label": "Sezione D (cronotropismo)",
       "type": "string",
       "function": "sezioneD"
     },
     {
-      "name": "Sezione E (andamento globale)",
+      "label": "Sezione E (dipping)",
       "type": "string",
       "function": "sezioneE"
     },
     {
-      "name": "Sezione F (andamento globale)",
+      "label": "Sezione F (firma)",
       "type": "string",
       "function": "sezioneF"
     }
