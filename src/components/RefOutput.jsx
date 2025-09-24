@@ -29,9 +29,8 @@ function RefOutput(props) {
 
     return (
         <div className={"ref-output"}>
-            <h3>{props.label}</h3>
             {functionResult && functionResult.split("\n").map((line, idx) =>
-                <div key={props.label+idx}>{line}</div>
+                (line === "") ? <br key={"break"+idx} /> : <div key={props.label+idx}>{line}</div>
             )}
         </div>
     );

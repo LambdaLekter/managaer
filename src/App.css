@@ -1,23 +1,69 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
 }
 
 #select-task {
     margin-bottom: 10px;
 }
 
+#task-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
 #inputs {
+    width: 150px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: stretch;
+    gap: 15px;
     margin: 20px;
+}
+
+.ref-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: #303030;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #202020;
+}
+
+.ref-input > label {
+    margin-left: 5px;
+}
+
+.ref-input > input {
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    background: none;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 16px;
 }
 
 .ref-output{
     text-align: left;
+}
+
+.separator {
+    height: auto;
+    width: 2px;
+    background-color: #aaa;
+    margin: 20px 0;
+}
+
+#outputs {
+    margin: 20px;
 }
 
 @keyframes spin {

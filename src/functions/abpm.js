@@ -39,7 +39,7 @@ export function sezioneB(inputs) {
     const B8 = inputs.PND >= 90
 
     if (B1 && B2 && B3 && B4)
-        return "Assenza di picchi pressori patologici."
+        return "Assenza di picchi pressori patologici.\n"
     else {
         const B9 = (140 <= inputs.PDS <= 159) || (140 <= inputs.PNS <= 159)
         const B10 = (90 <= inputs.PNS <= 99) || (90 <= inputs.PND <= 99)
@@ -61,14 +61,14 @@ export function sezioneB(inputs) {
         let distribuzione = ""
 
         if ((B5 || B6) && (B3 && B4) && !(B7 || B8)) {
-            distribuzione = "(distribuiti nelle ore diurne)"
+            distribuzione = " (distribuiti nelle ore diurne)"
         } else if((B7 || B8) && (B1 && B2) && !(B5 || B6)) {
-            distribuzione = "(distribuiti nelle ore notturne)"
+            distribuzione = " (distribuiti nelle ore notturne)"
         } else if((B5 || B6) && (B7 || B8)) {
-            distribuzione = "(distribuiti nelle ore diurne e notturne)"
+            distribuzione = " (distribuiti nelle ore diurne e notturne)"
         }
 
-        return "Presenza di picchi pressori compatibili con ipertensione fino al " + grado + " " + distribuzione
+        return "Presenza di picchi pressori compatibili con ipertensione fino al " + grado + distribuzione + ".\n"
     }
 }
 
@@ -85,20 +85,25 @@ export function sezioneC(inputs) {
 export function sezioneD(inputs) {
     if(!inputs) return "Input error"
 
-    return (inputs.CRO == 1) ? "Cronotropismo cardiaco conservato." : "Cronotropismo cardiaco non conservato."
+    let conservatoStr = (inputs.CRO === 1) ? "conservato" : "non conservato"
+
+    return "Cronotropismo cardiaco " + conservatoStr + "."
 }
 
 export function sezioneE(inputs) {
     if(!inputs) return "Input error"
 
-    return (inputs.DIP == 1) ? "Dipping notturno conservato." : "Dipping notturno non conservato."
+    let conservatoStr = (inputs.DIP === 1) ? "conservato" : "non conservato"
+
+    return "Dipping notturno " + conservatoStr + ".\n"
 }
 
 export function sezioneF(inputs) {
     if(!inputs) return "Input error"
 
     const now = new Date();
-    const data_str = now.toDateString()
-    return "Dott. Gaetano Capriati\n" +
-        "Esame refertato in data " + data_str + " - Copia conforme all'originale in mio possesso."
+    const date_str = now.toLocaleDateString("it-IT")
+    const time_str = now.toLocaleTimeString("it-IT", {hour: '2-digit', minute:'2-digit'})
+    return "\nDott. Gaetano Capriati\n" +
+        "Esame refertato in data " + date_str + " alle ore " + time_str + " - Copia conforme all'originale in mio possesso."
 }

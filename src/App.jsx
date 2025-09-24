@@ -43,12 +43,14 @@ function App() {
 
                 <hr />
 
-                <Inputs task={task} onInputsUpdated={onInputsUpdated} />
+                <div id={"task-container"}>
+                    <Inputs task={task} onInputsUpdated={onInputsUpdated} />
 
-                <hr />
+                    <div className={"separator"} />
 
-                <div>
-                    <Outputs task={task} inputs={inputs} />
+                    <div>
+                        <Outputs task={task} inputs={inputs} />
+                    </div>
                 </div>
             </div>
         </>

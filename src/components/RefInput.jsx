@@ -6,7 +6,7 @@ function RefInput(props) {
     }
 
     return (
-        <div className={"RefInput"}>
+        <div className={"ref-input"}>
             <label>{props.label} </label>
             <input onChange={onInputChange} type={props.type}></input>
         </div>
