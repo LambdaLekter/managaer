@@ -85,7 +85,7 @@ export function sezioneC(inputs) {
 export function sezioneD(inputs) {
     if(!inputs) return "Input error"
 
-    let conservatoStr = (inputs.CRO === 1) ? "conservato" : "non conservato"
+    let conservatoStr = (inputs.CRO == 1) ? "conservato" : "non conservato"
 
     return "Cronotropismo cardiaco " + conservatoStr + "."
 }
@@ -93,7 +93,7 @@ export function sezioneD(inputs) {
 export function sezioneE(inputs) {
     if(!inputs) return "Input error"
 
-    let conservatoStr = (inputs.DIP === 1) ? "conservato" : "non conservato"
+    let conservatoStr = (inputs.DIP == 1) ? "conservato" : "non conservato"
 
     return "Dipping notturno " + conservatoStr + ".\n"
 }
