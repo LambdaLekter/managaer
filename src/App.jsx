@@ -15,6 +15,16 @@ function App() {
         setInputs(newInputs);
     }
 
+    const onCopyClicked = () => {
+        navigator.clipboard.writeText(document.getElementById("outputs").innerText)
+            .then(() => {
+                alert("Testo copiato negli appunti!")
+            })
+            .catch(err => {
+                alert("Errore durante la copia negli appunti: " + err)
+            });
+    }
+
     const onTaskChange = (taskID) => {
         setError(false);
 
@@ -40,6 +50,8 @@ function App() {
                     <option value="none">---</option>
                     <option value="abpm">Referto ABPM</option>
                 </select>
+
+                <button id={"copy-outputs-btn"} onClick={onCopyClicked}>Copia Risultati</button>
 
                 <hr />
 
